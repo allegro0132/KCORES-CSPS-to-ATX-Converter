@@ -514,8 +514,6 @@ Wire Wire Line
 Connection ~ 8450 3650
 Wire Wire Line
 	8450 3750 8450 3650
-Wire Wire Line
-	8350 3650 8350 3750
 $Comp
 L Connector_Generic:Conn_02x04_Top_Bottom J4
 U 1 1 60BA4414
@@ -573,17 +571,6 @@ F 3 "" H 9850 1800 50  0001 C CNN
 	1    9850 1800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Top_Bottom J5
-U 1 1 60B44341
-P 9950 2200
-F 0 "J5" V 10046 2380 50  0000 L CNN
-F 1 "GW_PCIe/CPU" V 9955 2380 50  0000 L CNN
-F 2 "KCORES_Connector_ATX_Power:ATX_8Pin_P4.20mm_Vertical_4.20mm" H 9950 2200 50  0001 C CNN
-F 3 "~" H 9950 2200 50  0001 C CNN
-	1    9950 2200
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	8450 2600 8350 2600
 Wire Wire Line
@@ -596,8 +583,6 @@ Wire Wire Line
 Connection ~ 8550 2600
 Wire Wire Line
 	8650 2600 8550 2600
-Wire Wire Line
-	8650 2600 8650 2500
 Wire Wire Line
 	8350 2600 8350 2500
 Wire Wire Line
@@ -663,35 +648,146 @@ F 3 "" H 3100 8250 50  0001 C CNN
 	1    3100 8250
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	10150 3650 10250 3650
-Wire Wire Line
-	10250 3650 10250 4350
-Wire Wire Line
-	10250 4350 10150 4350
-Connection ~ 10150 3650
-Wire Wire Line
-	8650 3650 8750 3650
-Wire Wire Line
-	8750 3650 8750 4350
-Wire Wire Line
-	8750 4350 8650 4350
-Connection ~ 8650 3650
-Wire Wire Line
-	8650 1900 8750 1900
-Wire Wire Line
-	8750 1900 8750 2600
-Wire Wire Line
-	8750 2600 8650 2600
-Connection ~ 8650 1900
-Connection ~ 8650 2600
-Wire Wire Line
-	10150 1900 10250 1900
-Wire Wire Line
-	10250 1900 10250 2600
-Wire Wire Line
-	10250 2600 10150 2600
-Connection ~ 10150 1900
-Connection ~ 10150 2600
 NoConn ~ 2750 5100
+$Comp
+L Connector_Generic:Conn_02x04_Top_Bottom J5
+U 1 1 60B44341
+P 9950 2200
+F 0 "J5" V 10046 2380 50  0000 L CNN
+F 1 "GW_PCIe/CPU" V 9955 2380 50  0000 L CNN
+F 2 "KCORES_Connector_ATX_Power:ATX_8Pin_P4.20mm_Vertical_4.20mm" H 9950 2200 50  0001 C CNN
+F 3 "~" H 9950 2200 50  0001 C CNN
+	1    9950 2200
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+12V #PWR08
+U 1 1 6152719E
+P 8350 3500
+F 0 "#PWR08" H 8350 3350 50  0001 C CNN
+F 1 "+12V" H 8365 3673 50  0000 C CNN
+F 2 "" H 8350 3500 50  0001 C CNN
+F 3 "" H 8350 3500 50  0001 C CNN
+	1    8350 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3500 8350 3650
+Wire Wire Line
+	8350 3750 8350 3650
+Connection ~ 8350 3650
+Wire Wire Line
+	9850 3650 9850 3550
+$Comp
+L power:+12V #PWR010
+U 1 1 6153F2F5
+P 9850 3550
+F 0 "#PWR010" H 9850 3400 50  0001 C CNN
+F 1 "+12V" H 9865 3723 50  0000 C CNN
+F 2 "" H 9850 3550 50  0001 C CNN
+F 3 "" H 9850 3550 50  0001 C CNN
+	1    9850 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 61555C12
+P 8650 2750
+F 0 "#PWR09" H 8650 2500 50  0001 C CNN
+F 1 "GND" H 8655 2577 50  0000 C CNN
+F 2 "" H 8650 2750 50  0001 C CNN
+F 3 "" H 8650 2750 50  0001 C CNN
+	1    8650 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2600 8650 2750
+Wire Wire Line
+	10150 2700 10150 2600
+$Comp
+L power:GND #PWR011
+U 1 1 6155D239
+P 10150 2700
+F 0 "#PWR011" H 10150 2450 50  0001 C CNN
+F 1 "GND" H 10155 2527 50  0000 C CNN
+F 2 "" H 10150 2700 50  0001 C CNN
+F 3 "" H 10150 2700 50  0001 C CNN
+	1    10150 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 2500 8650 2600
+Connection ~ 8650 2600
+$Comp
+L Motor:Fan_3pin M3
+U 1 1 61573953
+P 6400 2100
+F 0 "M3" H 6558 2096 50  0000 L CNN
+F 1 "Fan_3pin" H 6558 2005 50  0000 L CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 6400 2010 50  0001 C CNN
+F 3 "http://www.hardwarecanucks.com/forum/attachments/new-builds/16287d1330775095-help-chassis-power-fan-connectors-motherboard-asus_p8z68.jpg" H 6400 2010 50  0001 C CNN
+	1    6400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_3pin M2
+U 1 1 61577A46
+P 5550 2100
+F 0 "M2" H 5708 2096 50  0000 L CNN
+F 1 "Fan_3pin" H 5708 2005 50  0000 L CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 5550 2010 50  0001 C CNN
+F 3 "http://www.hardwarecanucks.com/forum/attachments/new-builds/16287d1330775095-help-chassis-power-fan-connectors-motherboard-asus_p8z68.jpg" H 5550 2010 50  0001 C CNN
+	1    5550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_3pin M1
+U 1 1 6157F715
+P 4800 2100
+F 0 "M1" H 4958 2096 50  0000 L CNN
+F 1 "Fan_3pin" H 4958 2005 50  0000 L CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 4800 2010 50  0001 C CNN
+F 3 "http://www.hardwarecanucks.com/forum/attachments/new-builds/16287d1330775095-help-chassis-power-fan-connectors-motherboard-asus_p8z68.jpg" H 4800 2010 50  0001 C CNN
+	1    4800 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5250 2100
+NoConn ~ 6100 2100
+NoConn ~ 4500 2100
+Wire Wire Line
+	6400 1900 5550 1900
+Connection ~ 5550 1900
+Wire Wire Line
+	5550 1900 4800 1900
+Wire Wire Line
+	6400 2400 5550 2400
+Connection ~ 5550 2400
+Wire Wire Line
+	5550 2400 4800 2400
+Wire Wire Line
+	4800 1900 4800 1800
+$Comp
+L power:+12V #PWR06
+U 1 1 615C66B7
+P 4800 1800
+F 0 "#PWR06" H 4800 1650 50  0001 C CNN
+F 1 "+12V" H 4815 1973 50  0000 C CNN
+F 2 "" H 4800 1800 50  0001 C CNN
+F 3 "" H 4800 1800 50  0001 C CNN
+	1    4800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 615CE608
+P 6400 2550
+F 0 "#PWR07" H 6400 2300 50  0001 C CNN
+F 1 "GND" H 6405 2377 50  0000 C CNN
+F 2 "" H 6400 2550 50  0001 C CNN
+F 3 "" H 6400 2550 50  0001 C CNN
+	1    6400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2400 6400 2550
 $EndSCHEMATC
