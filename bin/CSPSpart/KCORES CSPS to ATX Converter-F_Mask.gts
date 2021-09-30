@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,(5.1.10)-1*%
-%TF.CreationDate,2021-09-25T23:36:15+08:00*%
+%TF.CreationDate,2021-09-30T12:58:34+08:00*%
 %TF.ProjectId,KCORES CSPS to ATX Converter,4b434f52-4553-4204-9353-505320746f20,1.0*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Soldermask,Top*%
 %TF.FilePolarity,Negative*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (5.1.10)-1) date 2021-09-25 23:36:15*
+G04 Created by KiCad (PCBNEW (5.1.10)-1) date 2021-09-30 12:58:34*
 %MOMM*%
 %LPD*%
 G01*
